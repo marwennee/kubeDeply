@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myingress-jenkins
+  namespace: jenkins
+  labels:
+    name: myingress-jenkins
+spec:
+  rules:
+  - host: jenkins.elyadata-devops.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: jenkins
+            port:
+              number: 8080

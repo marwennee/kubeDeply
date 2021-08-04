@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mean-app-config
+data:
+  HOST_DB: "mongo"
+  PORT_DB: "27017"
+  NAME_DB: "elyadata"
+
